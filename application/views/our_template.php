@@ -23,6 +23,7 @@ body
 {
     font-family: Arial;
     font-size: 14px;
+    background-color:#CFCFCF;
 }
 a {
     color: blue;
@@ -60,10 +61,38 @@ a:hover
 	
 <!-- Beginning header -->
 <!-- End of header-->
-    <div style='height:20px;'></div>  
-    <div>
+
+<!-- Menú -->
+
+	    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Gestion <span class="sr-only">(current)</span></a></li>
+            <li><a href="<?php echo site_url();?>/core/gestion_alumno">Alumnos</a></li>
+            <li><a href="<?php echo site_url();?>/core/gestion_curso">Cursos</a></li>
+            <li><a href="<?php echo site_url();?>/core/gestion_iglesia">Iglesias</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Acciones<span class="sr-only">(current)</span></a></li>
+            <li><a href="<?php echo site_url();?>/core/gestion_matricula">Matriculas</a></li>
+            <li><a href="<?php echo site_url();?>/core/gestion_inscripcion">Inscribir curso</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <div class="table-responsive">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+	
+<!-- End Menú -->
+
+    <!--<div style='height:20px;'></div>-->  
+    <div style="width: 1080px; margin-right: 30px; float: right;">
         <?php echo $output; ?>
- 
     </div>
 <!-- Beginning footer -->
 <div></div>
