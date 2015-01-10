@@ -44,6 +44,10 @@
 		
 		public function gestion_inscripcion(){
 			$crud = new Grocery_CRUD();
+<<<<<<< HEAD
+=======
+			$crud->set_subject('Inscripcion');
+>>>>>>> 4c112b2ceadf985a445489f02831ed650e6f23a2
 			$crud->set_table('dis_alumno_curso');
 			$crud->display_as('dis_curso','Curso');
 			$crud->display_as('dis_alumno','Alumno');
@@ -56,6 +60,10 @@
 		
 		public function gestion_matricula(){
 			$crud = new Grocery_CRUD();
+<<<<<<< HEAD
+=======
+			$crud->set_subject('Matricula');
+>>>>>>> 4c112b2ceadf985a445489f02831ed650e6f23a2
 			$crud->set_table('dis_pago_curso');
 			$crud->display_as('pa_costo','Costo');
 			$crud->display_as('dis_alumno','Alumno');
