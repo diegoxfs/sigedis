@@ -64,11 +64,7 @@ $autoload['libraries'] = array('database');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-<<<<<<< HEAD
-$autoload['helper'] = array();
-=======
 $autoload['helper'] = array('url','file');
->>>>>>> 4c112b2ceadf985a445489f02831ed650e6f23a2
 
 
 /*

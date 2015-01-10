@@ -4,6 +4,7 @@
 			parent::__construct();
 			$this->load->database();
 			$this->load->library('grocery_crud');
+			ini_set('date.timezone', 'America/Los_Angeles');
 		}
 		
 		public function index(){}
@@ -18,6 +19,19 @@
 			$crud->set_relation('dis_iglesia','dis_iglesia','id_nombre');
 			$output = $crud->render();
 			$this->_example_output($output);
+		}
+		
+		// Gestionar las calificaciones de los alumnos
+		// Tres calificiones por curso, asignar en la base de datos numero ordinal de nota por curso
+		
+		Public function gestion_calificacion(){
+			$crud = new Grocery_CRUD();
+			$crud->set_table('dis_calificacion');
+			$crud->set_relation('dis_curso','dis_curso','cu_nombre');
+			$crud->set_relation('dis_alumno','dis_alumno','al_rut');
+			$output = $crud->render();
+			$this->_example_output($output);
+			
 		}
 		
 		public function gestion_iglesia(){
@@ -44,10 +58,7 @@
 		
 		public function gestion_inscripcion(){
 			$crud = new Grocery_CRUD();
-<<<<<<< HEAD
-=======
 			$crud->set_subject('Inscripcion');
->>>>>>> 4c112b2ceadf985a445489f02831ed650e6f23a2
 			$crud->set_table('dis_alumno_curso');
 			$crud->display_as('dis_curso','Curso');
 			$crud->display_as('dis_alumno','Alumno');
@@ -60,10 +71,7 @@
 		
 		public function gestion_matricula(){
 			$crud = new Grocery_CRUD();
-<<<<<<< HEAD
-=======
 			$crud->set_subject('Matricula');
->>>>>>> 4c112b2ceadf985a445489f02831ed650e6f23a2
 			$crud->set_table('dis_pago_curso');
 			$crud->display_as('pa_costo','Costo');
 			$crud->display_as('dis_alumno','Alumno');

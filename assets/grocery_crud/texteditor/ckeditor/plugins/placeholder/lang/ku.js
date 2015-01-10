@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿/*
 Copyright (c) 2003-2012, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
@@ -20,26 +19,3 @@ CKEDITOR.plugins.setLang( 'placeholder', 'ku',
 		textMissing	: 'شوێن هه‌ڵگڕ ده‌بێت له‌ده‌ق پێکهاتبێت.'
 	}
 });
-=======
-﻿/*
-Copyright (c) 2003-2012, CKSource - Frederico Knabben. All rights reserved.
-For licensing, see LICENSE.html or http://ckeditor.com/license
-*/
-
-/*
-Copyright (c) 2003-2012, CKSource - Frederico Knabben. All rights reserved.
-For licensing, see LICENSE.html or http://ckeditor.com/license
-*/
-
-CKEDITOR.plugins.setLang( 'placeholder', 'ku',
-{
-	placeholder :
-	{
-		title		: 'خاسیه‌تی شوێن هه‌ڵگر',
-		toolbar		: 'درووستکردنی شوێن هه‌ڵگر',
-		text		: 'ده‌ق بۆ شوێن هه‌ڵگڕ',
-		edit		: 'چاکسازی شوێن هه‌ڵگڕ',
-		textMissing	: 'شوێن هه‌ڵگڕ ده‌بێت له‌ده‌ق پێکهاتبێت.'
-	}
-});
->>>>>>> 4c112b2ceadf985a445489f02831ed650e6f23a2
