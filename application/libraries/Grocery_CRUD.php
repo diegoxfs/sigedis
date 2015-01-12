@@ -2211,7 +2211,7 @@ class grocery_CRUD_Layout extends grocery_CRUD_Model_Driver
 		$extra_attributes = '';
 		if(!empty($field_info->db_max_length))
 			$extra_attributes .= "maxlength='{$field_info->db_max_length}'";
-		$input = "<input id='field-{$field_info->name}' class='form-control' name='{$field_info->name}' type='text' value=\"$value\" $extra_attributes />";
+		$input = "<input id='field-{$field_info->name}' class='form-contol' name='{$field_info->name}' type='text' value=\"$value\" $extra_attributes />";
 		return $input;
 	}
 
@@ -5308,7 +5308,7 @@ class UploadHandler
             case 'png':
                 @imagecolortransparent($new_img, @imagecolorallocate($new_img, 0, 0, 0));
                 @imagealphablending($new_img, false);
-                @imagesavealpha($new_img, true);
+                @imagealpha($new_img, true);
                 $src_img = @imagecreatefrompng($file_path);
                 $write_image = 'imagepng';
                 break;
