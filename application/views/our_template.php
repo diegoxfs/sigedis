@@ -91,7 +91,7 @@ a:hover
 <!-- End Menú -->
 
     <!--<div style='height:20px;'></div>-->  
-    <div style="width: 1080px; margin-right: 30px; float: right;">
+    <div style="width: 1000px; margin-right: 30px; float: right;">
         <?php echo $output; ?>
     </div>
 <!-- Beginning footer -->
