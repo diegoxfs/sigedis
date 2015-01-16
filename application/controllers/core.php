@@ -81,6 +81,29 @@
 			$output = $crud->render();
 			$this->_example_output($output);
 		}
+
+		public function gestion_usuario(){
+			$crud = new Grocery_CRUD();
+			$crud->set_subject('Usuario');
+			$crud->set_table('dis_usuario');
+			$crud->display_as('us_usuario','Usuario');
+			$crud->display_as('us_password','Password');
+			$crud->display_as('us_nombre','Nombre');
+			$crud->display_as('us_apepat','Apellido Paterno');
+			$crud->display_as('us_apemat','Apellido Materno');
+			$crud->display_as('us_email','E-mail');		
+			$output=$crud->render();
+			$this->_example_output($output);
+		}
+
+		public function gestion_permisos(){
+			$crud = new Grocery_CRUD();
+			$crud->set_subject('Usuario');
+			$crud->set_table('dis_usuario_rol');
+			$crud->set_relation_n_n('Roles','dis_usuario_rol','dis_rol','dis_usuario','dis_rol','ro_comentario');
+			$output=$crud->render();
+			$this->_example_output($output);
+		}
 		
 		public function _example_output($out = null){
 			$this->load->view('our_template.php',$out);

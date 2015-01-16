@@ -78,6 +78,11 @@ a:hover
             <li><a href="<?php echo site_url();?>/core/gestion_matricula">Matriculas</a></li>
             <li><a href="<?php echo site_url();?>/core/gestion_inscripcion">Inscribir curso</a></li>
           </ul>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Seguridad<span class="sr-only">(current)</span></a></li>
+            <li><a href="<?php echo site_url();?>/core/gestion_usuario">Usuarios</a></li>
+            <li><a href="<?php echo site_url();?>/core/gestion_permiso">Permisos</a></li>
+          </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <div class="table-responsive">

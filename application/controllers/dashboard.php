@@ -9,4 +9,7 @@
 			$this->load->view('dashboard/dashboard_index');
 		}
 		
+		public function panel(){
+			$this->load->view('dashboard/dashboard_panel');
+		}
 	}

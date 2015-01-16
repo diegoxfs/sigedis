@@ -39,7 +39,7 @@
       </div>
     </nav>
 
-    <div class="container-fluid">
+        <div class="container-fluid" style="margin-right:30px;">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
@@ -52,11 +52,6 @@
             <li class="active"><a href="#">Acciones<span class="sr-only">(current)</span></a></li>
             <li><a href="core/gestion_matricula">Matriculas</a></li>
             <li><a href="core/gestion_inscripcion">Inscribir curso</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Seguridad<span class="sr-only">(current)</span></a></li>
-            <li><a href="core/gestion_usuario">Usuarios</a></li>
-            <li><a href="core/gestion_inscripcion">Permisos</a></li>
           </ul>
          <!-- <ul class="nav nav-sidebar">
             <li><a href="">Nav item again</a></li>
@@ -71,6 +66,7 @@
         </div>
       </div>
     </div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
