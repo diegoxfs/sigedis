@@ -54,7 +54,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">SIGE<strong>DIS</strong></a>
+                <a class="navbar-brand" href="#"><li class"fa fa-dashboard">SIGE<strong>DIS</strong></li></a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -185,7 +185,7 @@
                         <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
                     </li>-->
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Gestión <i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa fa-edit"></i> Gestión <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                           <?php
                             $rol = $this->session->userdata('rol');
@@ -255,8 +255,22 @@
                                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Dashboard <small>Statistics Overview</small>
+                            <?php foreach($section as $page){ 
+                                echo $page; ?>
+                             <small></small>
                         </h1>
+                         <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="<?php echo site_url(); ?>/core">Sige<strong>dis</strong></a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-edit"></i> Gestión
+                            </li>
+                            <li class="active">
+                                <i class=""></i> <?php echo $page;?>
+                            </li>
+                        </ol>
+                        <?php }?>
                     </div>
                 </div>
 

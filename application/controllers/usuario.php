@@ -16,6 +16,12 @@
 		public function valuser(){
 			$user = $this->input->post('txtuser');
 			$psw  = $this->input->post('txtpsw');
+
+			if($user == '' and $psw == ''){
+				redirect(usuario);
+			}
+			else{
+
 			$sms  ="Ocurrio un error, por favor revise dentenidamente o informe a Diego.";
 
 			if($user==''||$psw=='')
@@ -65,7 +71,7 @@
 				//$this->session->set_userdata($session);
 				
 			}
-
+		}
 			
 		}
 
@@ -80,12 +86,7 @@
 		}
 
 		public function prueba (){
-			$string = "admin";
-			$string_encode = $this->encrypt->encode($string);
-			$string_decode = $this->encrypt->decode($string_encode);
-			echo $string_encode;
-			echo "<br>";
-			echo $string_decode;
+			echo $this->session->userdata('ip_address');
 		}
 
 
