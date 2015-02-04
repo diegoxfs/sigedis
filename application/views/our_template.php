@@ -2,13 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-   
-    <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="<?php echo base_url();?>assets/css/dashboard.css" rel="stylesheet">
- 
 <?php 
 foreach($css_files as $file): ?>
     <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
@@ -38,8 +32,8 @@ a:hover
 </head>
 <body>
 	
-   <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -47,56 +41,41 @@ a:hover
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?php echo site_url(); ?>/dashboard">SIGE<strong>DIS</strong></a>
+          <a class="navbar-brand" href="#">Bootstrap theme</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="<?php echo site_url(); ?>/dashboard">Dashboard</a></li>
-            <li><a href="#">Cuenta</a></li>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
           </ul>
-        </div>
+        </div><!--/.nav-collapse -->
       </div>
-    </nav>	
-	
-	
+    </nav>
 <!-- Beginning header -->
 <!-- End of header-->
 
 <!-- Menú -->
 
-	    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Gestion <span class="sr-only">(current)</span></a></li>
-            <li><a href="<?php echo site_url();?>/core/gestion_alumno">Alumnos</a></li>
-            <li><a href="<?php echo site_url();?>/core/gestion_curso">Cursos</a></li>
-            <li><a href="<?php echo site_url();?>/core/gestion_iglesia">Iglesias</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Acciones<span class="sr-only">(current)</span></a></li>
-            <li><a href="<?php echo site_url();?>/core/gestion_matricula">Matriculas</a></li>
-            <li><a href="<?php echo site_url();?>/core/gestion_inscripcion">Inscribir curso</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Seguridad<span class="sr-only">(current)</span></a></li>
-            <li><a href="<?php echo site_url();?>/core/gestion_usuario">Usuarios</a></li>
-            <li><a href="<?php echo site_url();?>/core/gestion_permiso">Permisos</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <div class="table-responsive">
-            
-          </div>
-        </div>
-      </div>
-    </div>
+
 
 	
 <!-- End Menú -->
 
     <!--<div style='height:20px;'></div>-->  
-    <div style="width: 1000px; margin-right: 30px; float: right;">
+    <div style="width: 1000px; margin: 80px 100px 0px 150px; ">
         <?php echo $output; ?>
     </div>
 <!-- Beginning footer -->

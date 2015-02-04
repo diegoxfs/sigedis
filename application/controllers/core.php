@@ -18,6 +18,11 @@
 			$crud->set_subject('Alumno');
 			$crud->set_relation('dis_iglesia','dis_iglesia','id_nombre');
 			$output = $crud->render();
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/bootstrap.min.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/sb-admin.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/plugins/morris.css';
+ 			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/font-awesome/css/font-awesome.css';
+			$output->js_files[] =  base_url().'assets/grocery_crud/themes/sbadmin/js/bootstrap.js';
 			$this->_example_output($output);
 		}
 		
@@ -30,6 +35,11 @@
 			$crud->set_relation('dis_curso','dis_curso','cu_nombre');
 			$crud->set_relation('dis_alumno','dis_alumno','al_rut');
 			$output = $crud->render();
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/bootstrap.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/sb-admin.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/plugins/morris.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/font-awesome/css/font-awesome.css';
+			$output->js_files[] = base_url().'assets/grocery_crud/themes/sbadmin/js/bootstrap.js';
 			$this->_example_output($output);
 			
 		}
@@ -41,8 +51,12 @@
 			$crud->display_as('id_direccion','Dirección');
 			$crud->set_subject('iglesia');
 			$output = $crud->render();
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/bootstrap.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/sb-admin.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/plugins/morris.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/font-awesome/css/font-awesome.css';
+			$output->js_files[] = base_url().'assets/grocery_crud/themes/sbadmin/js/bootstrap.js';
 			$this->_example_output($output);
-			
 		}
 		
 		public function gestion_curso(){
@@ -52,8 +66,12 @@
 			$crud->display_as('cu_descripcion','Descripción');
 			$crud->set_subject('Curso');
 			$output = $crud->render();
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/bootstrap.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/sb-admin.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/plugins/morris.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/font-awesome/css/font-awesome.css';
+			$output->js_files[] = base_url().'assets/grocery_crud/themes/sbadmin/js/bootstrap.js';
 			$this->_example_output($output);
-			
 		}
 		
 		public function gestion_inscripcion(){
@@ -65,6 +83,11 @@
 			$crud->set_relation('dis_curso','dis_curso','cu_nombre');
 			$crud->set_relation('dis_alumno','dis_alumno','al_rut');
 			$output = $crud->render();
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/bootstrap.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/sb-admin.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/plugins/morris.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/font-awesome/css/font-awesome.css';
+			$output->js_files[] = base_url().'assets/grocery_crud/themes/sbadmin/js/bootstrap.js';
 			$this->_example_output($output);
 			
 		}
@@ -79,6 +102,11 @@
 			$crud->set_relation('dis_curso','dis_curso','cu_nombre');
 			$crud->set_relation('dis_alumno','dis_alumno','al_rut');
 			$output = $crud->render();
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/bootstrap.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/sb-admin.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/plugins/morris.css';
+ 			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/font-awesome/css/font-awesome.css';//font-awesome/css/font-awesome.min.css
+			$output->js_files[] = base_url().'assets/grocery_crud/themes/sbadmin/js/bootstrap.js';
 			$this->_example_output($output);
 		}
 
@@ -91,8 +119,15 @@
 			$crud->display_as('us_nombre','Nombre');
 			$crud->display_as('us_apepat','Apellido Paterno');
 			$crud->display_as('us_apemat','Apellido Materno');
-			$crud->display_as('us_email','E-mail');		
-			$output=$crud->render();
+			$crud->display_as('us_email','E-mail');
+			$crud->callback_before_insert(array($this,'encrypt_password'));
+			$crud->callback_before_update(array($this,'encrypt_password'));
+			$output = $crud->render();
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/bootstrap.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/sb-admin.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/plugins/morris.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/font-awesome/css/font-awesome.css';
+			$output->js_files[] = base_url().'assets/grocery_crud/themes/sbadmin/js/bootstrap.js';
 			$this->_example_output($output);
 		}
 
@@ -101,12 +136,23 @@
 			$crud->set_subject('Usuario');
 			$crud->set_table('dis_usuario_rol');
 			$crud->set_relation_n_n('Roles','dis_usuario_rol','dis_rol','dis_usuario','dis_rol','ro_comentario');
-			$output=$crud->render();
+			$output = $crud->render();
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/bootstrap.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/sb-admin.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/css/plugins/morris.css';
+			$output->css_files[] = base_url().'assets/grocery_crud/themes/sbadmin/font-awesome/css/font-awesome.css';
+			$output->js_files[] = base_url().'assets/grocery_crud/themes/sbadmin/js/bootstrap.js';
 			$this->_example_output($output);
+		}
+
+		public function encrypt_password($post_array)
+		{
+			$post_array['us_password'] = $this->encrypt->encode($post_array['us_password']);
+			return $post_array;
 		}
 		
 		public function _example_output($out = null){
-			$this->load->view('our_template.php',$out);
+			$this->load->view('our_template_new.php',$out);
 		}
 		
 	}
